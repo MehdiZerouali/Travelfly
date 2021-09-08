@@ -1,0 +1,227 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.contglobal{
+    display: flex;
+    min-height: 100vh;
+}
+
+/*  Panneaux Gauche */ 
+
+.panneaugauche{
+    flex: 1 1 33.333%;
+    padding: 25px;
+}
+
+.panneaugauche h1{
+    color: #ef3024;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.panneaugauche h1 strong {
+    color: #f58f8b; 
+    font-weight: 900;
+}
+
+.formebloc h3{
+    color: #666;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 45px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formebloc h3 img{
+    width: 40px;
+}
+
+.formebloc .formegroupe{
+    position: relative;
+    display: flex;
+    margin-bottom: 45px;
+}
+
+.formebloc .formegroupe label{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 20px;
+    transition: 0.4s ease-out;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formebloc .formegroupe input {
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom:3px solid#aaa;
+    color: #666;
+    font-size: 20px;
+    transition: 0.4s ease-out;
+    }
+
+.formegroupe:nth-child(4){
+    margin-bottom: 25px;
+    justify-content: flex-end;
+}
+
+.formebloc .formegroupe .buttonsub{
+    display: block;
+    width: auto;
+    padding: 15px 60px;
+    border: 3px solid #ef3024;
+    border-radius: 999px;
+    background-image: linear-gradient( to right, transparent 50%, #f58f8b 50%, #ef3024 );
+    background-size: 200%;
+    color:#ef3024;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.formebloc .formegroupe .buttonsub:hover{
+    color: #fff;
+    background-position: 100%;
+    border: 3px solid #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formebloc .mdpperdu a {
+    color: #ef3024;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formebloc .mdpperdu a:hover{
+    border-bottom-color:#ef3024 ;
+}
+
+.socialmedia{
+
+    width: 100%;
+    min-height: 10vh;
+    position: relative;
+    top: 10px;
+}
+
+.iconrs{
+    margin: 5px;
+    font-size: 30px;
+    color: #666;
+}
+
+.iconrs:hover{
+    color:#ef3024;
+}
+
+/* Droite */
+
+.panneaudroite{
+    flex: 1 1 66.666%;
+    background-image: linear-gradient(to bottom right, #ef3024, #f58f8b  );
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.panneaudroite .illustration{
+    margin-bottom: 50px;
+}
+
+.panneaudroite h2{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.panneaudroite .illustration img {
+    width: 1000px;
+}
+
+/* animation*/
+
+.formebloc .formegroupe:focus-within label,
+.formebloc .formegroupe.animation label {
+    top: 0px;
+    transform: translateY(-100%);
+    color: #ef3024;
+}
+
+.formebloc .formegroupe:focus-within input,
+.formebloc .formegroupe.animation input {
+    border-bottom-color: #ef3024;
+}
+
+@media screen and ( max-width : 1200px ) {
+
+    .contglobal{
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .panneaudroite{
+        display: none;
+
+    }
+    .panneaugauche{
+        width: 70vw;
+        padding: 25px;
+    }
+
+}
+
+@media  screen and (max-width: 700px) {
+    .panneaugauche{
+        width: 80vw;
+    }
+
+    .formebloc .formegroupe .buttonsub{
+        margin: 0 auto;
+    }
+
+    .mdpperdu{
+        text-align: center;
+    }
+
+    .socialmedia{
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+    
+}
+
+@media  screen and (max-width: 400px) {
+    .panneaugauche{
+        width: 100vw;
+    }
+
+    
+}
